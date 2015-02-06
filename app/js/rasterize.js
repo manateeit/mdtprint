@@ -5,7 +5,7 @@ page.paperSize = {
     width: '6in',
     height: '4in',
     margin: {
-        top: '10px',
+        top: '5px',
         left: '25px',
         right: '25px',
         bottom: '10px'
@@ -20,19 +20,14 @@ page.viewportSize = {
 };
 
 page.open(system.args[1], function (status) {
-
-    if (status !== 'success') {
-         phantom.exit();   
-    } else {
-        window.setTimeout(function () {
-            var size = page.evaluate(function () {
-                return {width: 600, height : 540};
-                });
-                page.paperSize = size;
-                page.render(system.args[2]);
-                phantom.exit();
-        }, 1000);
-    }
+    window.setTimeout(function () {
+        var size = page.evaluate(function () {
+            return {width: 600, height : 540};
+            });
+            page.paperSize = size;
+            page.render(system.args[2]);
+            phantom.exit();
+    }, 1000);
 });
 
 page.onError = function(msg, trace) {
