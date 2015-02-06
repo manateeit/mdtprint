@@ -21,18 +21,14 @@ page.viewportSize = {
 
 page.open(system.args[1], function (status) {
 
-    if (status !== 'success') {
-         phantom.exit();   
-    } else {
-        window.setTimeout(function () {
-            var size = page.evaluate(function () {
-                return {width: 600, height : 540};
-                });
-                page.paperSize = size;
-                page.render(system.args[2]);
-                phantom.exit();
-        }, 8000);
-    }
+    window.setTimeout(function () {
+        var size = page.evaluate(function () {
+            return {width: 600, height : 540};
+            });
+            page.paperSize = size;
+            page.render(system.args[2]);
+            phantom.exit();
+    }, 5000);
 });
 
 page.onError = function(msg, trace) {
