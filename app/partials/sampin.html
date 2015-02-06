@@ -3,7 +3,7 @@
         <div class="no-print rightText" id="bypassme">
                 <button style="margin: 10px 10px;" class="btn btn-large dontprint" onclick="DownloadPDF()">Download <i
                     class="icon-white icon-folder-open"></i></button>
-                <form id="form-download-file" action="getfile.php" method="POST" hidden>
+                <form id="form-download-file" action="../getfile.php" method="POST" hidden>
                     <input value="" type="text" name="url">
                 </form>
             <button ng-hide="true" style="margin: 10px 10px;" class="btn btn-large dontprint" ng-click="renderPDF()">PDF</button>
