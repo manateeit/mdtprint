@@ -1,0 +1,190 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+
+html,
+body {
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto;
+  /* Negative indent footer by its height */
+  margin: 0 auto -60px;
+  /* Pad bottom by footer height */
+  padding: 0 0 60px;
+}
+
+.footer-text {
+  text-align: center;
+  color: #949494;
+}
+
+.head { color:black !important;;}
+
+.navbar {
+  list-style: none;
+}
+
+.navbar .nav-item {
+  float: left;
+  padding: 5px;
+  font-size: 13px;
+  margin-left: 2px;
+  margin-top: 2px;
+  border-radius: 3px;
+}
+
+.navbar .nav-item:hover {
+  text-decoration: none;
+  background-color: #eee;
+}
+
+/* app css stylesheet */
+
+pre {
+  display: block;
+  margin: 0;
+  padding: 5px;
+  font-size: 11px;
+  color: #333;
+  word-break: break-all;
+  word-wrap: break-word;
+  background-color: transparent !important;
+  border: 0px solid transparent !important;
+  border-radius: 0;
+}
+
+.rightText {
+  text-align: right;
+}
+
+.initial {
+  width: 10% !important;
+}
+
+.para {
+  width: 36%;
+}
+
+.spec {
+  width: 20% !important;
+  text-align: center;
+}
+
+.result {
+  width: 39%;
+  text-align: right;
+  color:blue;
+    font-size:20px;
+}
+.tested {
+    color:red;
+}
+
+.comments {
+  width: 66%;
+}
+
+.sample-image {
+  width: 36%;
+}
+
+#item_details {
+  margin-bottom: 20px;
+
+}
+
+div#header img {
+  margin: 20px auto;
+}
+
+#ship_details {
+  margin-right: 0px;
+  margin-left: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+#date-quote {
+  margin-right: 0px;
+  margin-left: auto;
+  margin-top: -115px;
+  margin-bottom: 40px;
+
+}
+
+
+.quote_body {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#quote_expiry tr td {
+  text-align: left;
+}
+
+.container {
+  background: #fff;
+}
+
+.one_half {
+  width: 50%;
+}
+
+.one_fourth {
+  width: 25%;
+}
+
+.one_eight {
+  width: 12.5%;
+}
+
+.one_third {
+  width: 33.33%;
+}
+
+/*  Print out css */
+@media print {
+  .no-print, .no-print * {
+    display: none !important;
+  }
+  .header {
+    margin-top: 10px;
+  }
+  body {
+    font-size: 11px !important;
+  }
+  .footer-text {
+    margin-left: 130px !important;
+    text-align: center !important;
+    color: #ddd !important;
+    font-size: 10px !important;
+    }
+  .footer {
+    display: none;
+  }
+}
+
+html#iprint-preview #navbar-container {
+  display: none;
+}
+
+.header-print {
+  /*margin-top: -41px;*/
+}
+
+.container {
+  /*padding-left: 0px !important;*/
+  /*padding-right: 0px !important;*/
+}
+
+.content {
+  margin-top: 30px !important;
+}
+
+.no-print {
+  margin-top: -35px;
+}

@@ -1,0 +1,121 @@
+<div class="header">
+    <div class="no-print rightText" id="bypassme">
+       <button style="margin: 10px 10px;" class="btn btn-large dontprint" onclick="javascript:window.print()">Print <i
+      class="icon-white icon-folder-open"></i></button>
+    </div>
+
+    <div id="header" class="container">
+      <img alt="MDT LOGO" src="img/Logo.png" style="height: 80px; width: 174px;">
+    </div>
+</div>
+
+<div class="container quote_body">
+    <div id="date-quote" class="table-responsive one_half">
+        <table class="table table-bordered">
+
+            <thead>
+            <tr>
+                <th>DATE</th>
+                <th>QUOTE NO.</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>{{quote.date}}</td>
+                <td>{{quote.number}}</td>
+            </tr>
+            </tbody>
+
+        </table>
+    </div>
+
+    <div id="client_details" class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>CUSTOMER BILLING</th>
+                <th>CUSTOMER SHIPPING</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span>{{quote.company.name}}</span><br />
+                    <span>{{quote.company.field83251}}</span><br />
+                    <span ng-show="doesExist(quote.company.address2)">{{quote.company.address2}}<br /></span>
+                    <span> {{quote.company.field83253}},{{quote.company.field83254}}  {{quote.company.field83255}}<br /></span>
+                    <span ng-show="doesExist(quote.contact.name)">{{quote.contact.name}}<br /></span>
+                    <span ng-show="doesExist(quote.contact.field71096)" >Office: {{quote.contact.field71096}}<br /></span>
+                    <span ng-show="doesExist(quote.contact.field71136)">Mobile: {{quote.contact.field71136}}<br /></span>
+                    <span ng-show="doesExist(quote.contact.field71139)">Email:  {{quote.contact.field71139}}<br /></span>
+                </td>
+                <td>
+                    <span>{{quote.company.name}}<br /></span>
+                    <span>{{quote.location.field71145}}<br /></span>
+                    <span ng-show="doesExist(quote.location.address2)">{{quote.location.address2}}<br /></span>
+                    <span> {{quote.location.field71147}} , {{quote.location.field84480}}  {{quote.location.field71153}}<br /></span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="ship_details" class="table-responsive one_half">
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>TERMS</th>
+                <th>SHIP DATE</th>
+                <th>SHIP VIA</th>
+                <th>FOB</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>{{quote.term}}</td>
+                <td style="text-align: center">{{quote.shipMonth}} / {{quote.shipYear}}</td>
+                <td>{{quote.shipVia}}</td>
+                <td>{{quote.FOB}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="item_details" class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>ITEM</th>
+                <th>DESCRIPTION</th>
+                <th>PRICE/QUOTE</th>
+                <th>PACKAGING</th>
+                <th>QUANTITY</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="quoteItem in quote.quoteItems">
+                <td class="item_code">{{quoteItem.material.name}}</td>
+                <td class="item_desc">{{quoteItem.description}}</td>
+                <td class="item_price">{{quoteItem.total}}</td>
+                <td class="item_pack">{{quoteItem.packagingType.name}}</td>
+                <td class="item_quantity">{{quoteItem.mot.desc}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="quote_comment">
+        <p>Comments:</p>
+    </div>
+
+    <div id="quote_expiry" class="table-responsive">
+        <table class="table table-bordered">
+            <tbody>
+            <tr>
+                <td><pre>{{quote.comments}}</pre>
+
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+

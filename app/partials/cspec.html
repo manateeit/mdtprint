@@ -1,0 +1,120 @@
+
+<div class="header">
+    <div class="no-print rightText" id="bypassme">
+        <button style="margin: 10px 10px;" class="btn btn-large dontprint" onclick="javascript:window.print()">Print <i
+                class="icon-white icon-folder-open"></i></button>
+        <button style="margin: 10px 10px;" class="btn btn-large dontprint" ng-click="downloadPDF(cspecID)">Download <i
+                class="icon-white icon-folder-open"></i></button>
+        <button ng-hide="true" style="margin: 10px 10px;" class="btn btn-large dontprint" ng-click="renderPDF()">PDF</button>
+    </div>
+
+    <p style="text-align: center;">
+        <img alt="MDT LOGO" src="img/Logo.png" style="height: 80px; width: 174px;">
+    </p>
+
+</div>
+
+
+<div class="centerToPage"><h2 style="text-transform: uppercase; text-align: center;">Customer Specifications</h2></div>
+<div class="container">
+    <table class="table table-hover table-bordered">
+        <tbody>
+        <tr class="stable-row">
+            <td style="width:50%">
+                <strong>Product:</strong> {{ data.material.field83297 + ' ' + data.material.field83298 + ' ' + data.material.field83290 }}<br/>
+                <strong>Customer:</strong> {{ data.customer.name }}<br/>
+                <strong>Date:</strong> {{ data.date }}<br/>
+
+            </td>
+            <td>
+                <strong>PO:</strong>  {{ data.po }} <br/>
+                <strong>Part Number:</strong> {{ data.material.name }}<br/>
+                <strong>Spec ID:</strong> {{ cspecId }} <br/>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <table class="table table-hover table-bordered">
+        <thead>
+        <tr>
+            <th class="initial">Initials</th>
+            <th class="para">Parameters</th>
+            <th class="spec">Spec</th>
+            <th class="result">Results</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="stable-row">
+            <td class="initial"></td>
+            <td class="para">Melt Flow</td>
+            <td class="spec">D1238</td>
+            <td class="result">{{ data.meltflow }} dg/min</td>
+        </tr>
+        <tr class="stable-row">
+            <td class="initial"></td>
+            <td class="para">Filler Content</td>
+            <td class="spec">D2584</td>
+            <td class="result">{{ data.fillerContent }} %</td>
+        </tr>
+        <tr class="stable-row">
+            <td class="initial"></td>
+            <td class="para">Density</td>
+            <td class="spec">D792</td>
+            <td class="result">{{ data.density }} g/cm^3</td>
+        </tr>
+        <tr class="stable-row">
+            <td class="initial"></td>
+            <td class="para">Tensile Strength</td>
+            <td class="spec">D638</td>
+            <td class="result">{{ data.tensileStrength }} psi</td>
+        </tr>
+        <tr class="stable-row">
+            <td class="initial"></td>
+            <td class="para">Flexural Modulus</td>
+            <td class="spec">D790</td>
+            <td class="result">{{ data.flexuralModulus }} psi</td>
+        </tr>
+        <tr class="stable-row">
+            <td class="initial"></td>
+            <td class="para">Color Reading</td>
+            <td class="spec">J1585</td>
+            <td class="result">{{ data.colorReading }}</td>
+        </tr>
+        <tr class="stable-row">
+            <td class="initial"></td>
+            <td class="para">Color</td>
+            <td class="spec"></td>
+            <td class="result">{{ data.color }}</td>
+        </tr>
+        <tr class="stable-row">
+            <td class="initial"></td>
+            <td class="para">Izod-Notched</td>
+            <td class="spec">D1238</td>
+            <td class="result">{{ data.izodNotched }} ft-lb/in</td>
+        </tr>
+        <tr class="stable-row">
+            <td class="initial"></td>
+            <td class="para">Monthly Volume</td>
+            <td class="spec"> </td>
+            <td class="result">{{ data.monthlyVolume }}</td>
+        </tr>
+        </tbody>
+    </table>
+    <table class="table table-hover table-bordered">
+        <tbody>
+        <tr class="stable-row">
+            <td class="comments">
+                <strong>Comments:</strong><br/>
+                <pre>{{ data.comments }}</pre>
+            </td>
+            <td class="sample-image">
+                <strong>Sample Image:</strong><br/>
+                <img height="100px" width="100px" data-ng-src="{{'data:' + data.image.type  + ';base64,' + data.image.base64}}">
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
