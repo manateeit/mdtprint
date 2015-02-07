@@ -16,14 +16,14 @@ page.zoomFactor = 0.5;
 
 page.viewportSize = {
   width: 600,
-  height: 580
+  height: 600
 };
 
 page.open(system.args[1], function (status) {
 
     window.setTimeout(function () {
         var size = page.evaluate(function () {
-            return {width: 600, height : 580};
+            return {width: 600, height : 600};
             });
             page.paperSize = size;
             page.render(system.args[2]);
