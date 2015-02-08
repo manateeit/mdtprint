@@ -31,7 +31,7 @@ page.open(system.args[1], function (status) {
 
         page.render(system.args[2]);
         phantom.exit();
-    }, 15000);
+    }, 30000);
 });
 
 page.onError = function(msg, trace) {
