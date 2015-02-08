@@ -8,7 +8,7 @@ page.paperSize = {
         top: '40px',
         left: '15px',
         right: '15px',
-        bottom: '10px'
+        bottom: '30px'
     }
 }
 
