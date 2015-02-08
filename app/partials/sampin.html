@@ -1,21 +1,15 @@
 <div class="row">
     <div class="header col-md-12 header-print">
         <div class="no-print rightText" id="bypassme">
-            <button style="margin: 10px 10px;" class="btn btn-large dontprint" onclick="javascript:window.print()">Print <i
-                    class="icon-white icon-folder-open"></i></button>
-          <!--   <button style="margin: 10px 10px;" class="btn btn-large dontprint" ng-click="downloadPDF(cspecID)">Download <i
-                    class="icon-white icon-folder-open"></i></button> -->
                 <button style="margin: 10px 10px;" class="btn btn-large dontprint" onclick="DownloadPDF()">Download <i
                     class="icon-white icon-folder-open"></i></button>
                 <form id="form-download-file" action="getfile.php" method="POST" hidden>
                     <input value="" type="text" name="url">
                 </form>
-            <button ng-hide="true" style="margin: 10px 10px;" class="btn btn-large dontprint" ng-click="renderPDF()">PDF</button>
         </div>
 
     </div>
 </div>
-
 
 <div class="container" style="font-size:20px;">
         <table class="table table-hover table-bordered" id="top-header">
