@@ -15,21 +15,23 @@ page.paperSize = {
 page.zoomFactor = 0.5;
 
 page.viewportSize = {
-  width: 800,
+  width: 700,
   height: 600
 };
     
 page.open(system.args[1], function (status) {
     window.setTimeout(function () {
         var size = page.evaluate(function () {
-            return {width: width = 800, height : 600 };
+            return {width: width = 700, height : 600 };
         });
+
+        console.log(page.content);
 
         page.paperSize = size;
 
         page.render(system.args[2]);
         phantom.exit();
-    }, 8000);
+    }, 15000);
 });
 
 page.onError = function(msg, trace) {
