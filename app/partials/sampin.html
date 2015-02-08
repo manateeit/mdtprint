@@ -1,24 +1,29 @@
 <div class="row">
-    <div class="header col-md-12 header-print" style="margin-top: -35px;">
+    <div class="header col-md-12 header-print">
         <div class="no-print rightText" id="bypassme">
-            <button style="margin: 10px 10px; width:100px;" class="btn btn-large dontprint" onclick="DownloadPDF()">Download <i
-                class="icon-white icon-folder-open"></i></button>
-            <form id="form-download-file" action="http://mdtprint.mediathread.co/getfile.php" method="POST" hidden>
-                <input value="" type="text" name="url">
-            </form>
+            <button style="margin: 10px 10px;" class="btn btn-large dontprint" onclick="javascript:window.print()">Print <i
+                    class="icon-white icon-folder-open"></i></button>
+          <!--   <button style="margin: 10px 10px;" class="btn btn-large dontprint" ng-click="downloadPDF(cspecID)">Download <i
+                    class="icon-white icon-folder-open"></i></button> -->
+                <button style="margin: 10px 10px;" class="btn btn-large dontprint" onclick="DownloadPDF()">Download <i
+                    class="icon-white icon-folder-open"></i></button>
+                <form id="form-download-file" action="getfile.php" method="POST" hidden>
+                    <input value="" type="text" name="url">
+                </form>
+            <button ng-hide="true" style="margin: 10px 10px;" class="btn btn-large dontprint" ng-click="renderPDF()">PDF</button>
         </div>
 
     </div>
 </div>
 
 
-<div class="container" style="font-size:18px;">
+<div class="container" style="font-size:20px;">
         <table class="table table-hover table-bordered" id="top-header">
             <tbody>
             <tr class="stable-row">
                 <td style="width:50%">
                     <p style="text-align: left;">
-                        <img id="imgData" alt="MDT LOGO" src="img/Logo.png" style="height: 100px; width: 220px;">
+                        <img id="imgData" alt="MDT LOGO" src="img/Logo.png" style="height: 100px; width: 232px;">
                     </p>
 
                 </td>
@@ -34,7 +39,7 @@
         </table>
 
 
-        <table class="table table-hover table-bordered">
+        <table class="table table-hover table-bordered" style="color:blue;">
             <thead>
             <tr>
                 <th class="para">Parameters</th>
