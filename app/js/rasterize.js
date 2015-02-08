@@ -5,9 +5,9 @@ page.paperSize = {
     width: '6in',
     height: '4in',
     margin: {
-        top: '10px',
-        left: '25px',
-        right: '25px',
+        top: '5px',
+        left: '15px',
+        right: '15px',
         bottom: '10px'
     }
 }
@@ -16,18 +16,19 @@ page.zoomFactor = 0.5;
 
 page.viewportSize = {
   width: 600,
-  height: 600
+  height: 470
 };
-
+    
 page.open(system.args[1], function (status) {
-
     window.setTimeout(function () {
         var size = page.evaluate(function () {
-            return {width: 600, height : 600};
-            });
-            page.paperSize = size;
-            page.render(system.args[2]);
-            phantom.exit();
+            return {width: width = 600, height : 470 };
+        });
+
+        page.paperSize = size;
+
+        page.render(system.args[2]);
+        phantom.exit();
     }, 5000);
 });
 
