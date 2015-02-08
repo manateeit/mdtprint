@@ -42,30 +42,30 @@
             </tr>
             </thead>
             <tbody>
-            <tr class="stable-row">
+             <tr class="stable-row">
                 <td class="para">Melt Flow</td>
-                <td class="result">{{ data.provided.meltflow }} dg/min</td>
-                <td class="result">{{ data.tested.meltflow }} dg/min</td>
+                <td class="result">{{ data.provided.meltflow }} <span ng-show="data.provided.meltflow > 0">dg/min </span></td>
+                <td class="result">{{ data.tested.meltflow }} <span ng-show="data.tested.meltflow > 0">dg/min </span></td>
             </tr>
             <tr class="stable-row">
                 <td class="para">Filler Content</td>
-                <td class="result">{{ data.provided.fillerContent }} %</td>
-                <td class="result">{{ data.tested.fillerContent }} %</td>
+                <td class="result">{{ data.provided.fillerContent }} <span ng-show="data.provided.fillerContent > 0">%</span></td>
+                <td class="result">{{ data.tested.fillerContent }} <span ng-show="data.tested.fillerContent > 0">%</span></td>
             </tr>
             <tr class="stable-row">
                 <td class="para">Density</td>
-                <td class="result">{{ data.provided.density }} g/cm^3</td>
-                <td class="result">{{ data.tested.density }} g/cm^3</td>
+                <td class="result">{{ data.provided.density }} <span ng-show="data.provided.density > 0">g/cm^3</span></td>
+                <td class="result">{{ data.tested.density }} <span ng-show="data.tested.density > 0">g/cm^3</span></td>
             </tr>
             <tr class="stable-row">
                 <td class="para">Tensile Strength</td>
-                <td class="result">{{ data.provided.tensileStrength }} psi</td>
-                <td class="result">{{ data.tested.tensileStrength }} psi</td>
+                <td class="result">{{ data.provided.tensileStrength }} <span ng-show="data.provided.tensileStrength > 0">psi</span></td>
+                <td class="result">{{ data.tested.tensileStrength }} <span ng-show="data.tested.tensileStrength > 0">psi</span></td>
             </tr>
             <tr class="stable-row">
                 <td class="para">Flexural Modulus</td>
-                <td class="result">{{ data.provided.flexuralModulus }} psi</td>
-                <td class="result">{{ data.tested.flexuralModulus }} psi</td>
+                <td class="result">{{ data.provided.flexuralModulus }} <span ng-show="data.provided.flexuralModulus > 0">psi</span></td>
+                <td class="result">{{ data.tested.flexuralModulus }} <span ng-show="data.tested.flexuralModulus > 0">psi</span></td>
             </tr>
             <tr class="stable-row">
                 <td class="para">Color Reading</td>
@@ -74,8 +74,8 @@
             </tr>
             <tr class="stable-row">
                 <td class="para">Izod-Notched</td>
-                <td class="result">{{ data.provided.izodNotched }} ft-lb/in</td>
-                <td class="result">{{ data.tested.izodNotched }} ft-lb/in</td>
+                <td class="result">{{ data.provided.izodNotched }} <span ng-show="data.provided.izodNotched > 0">ft-lb/in</span></td>
+                <td class="result">{{ data.tested.izodNotched }} <span ng-show="data.tested.izodNotched > 0">ft-lb/in</span></td>
             </tr>
             <tr class="stable-row">
                 <td class="para">Color</td>
