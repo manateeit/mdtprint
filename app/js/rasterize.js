@@ -5,10 +5,10 @@ page.paperSize = {
     width: '6in',
     height: '4in',
     margin: {
-        top: '40px',
+        top: '10px',
         left: '15px',
         right: '15px',
-        bottom: '30px'
+        bottom: '10px'
     }
 }
 
@@ -16,13 +16,13 @@ page.zoomFactor = 0.5;
 
 page.viewportSize = {
   width: 900,
-  height: 700
+  height: 740
 };
     
 page.open(system.args[1], function (status) {
     window.setTimeout(function () {
         var size = page.evaluate(function () {
-            return {width: width = 900, height : 700 };
+            return {width: width = 900, height : 740 };
         });
 
         console.log(page.content);
