@@ -16,13 +16,13 @@ page.zoomFactor = 0.5;
 
 page.viewportSize = {
   width: 850,
-  height: 720
+  height: 680
 };
     
 page.open(system.args[1], function (status) {
     window.setTimeout(function () {
         var size = page.evaluate(function () {
-            return {width: width = 850, height : 720 };
+            return {width: width = 850, height : 680 };
         });
         page.paperSize = size;
 
