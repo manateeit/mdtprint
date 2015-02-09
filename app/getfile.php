@@ -5,7 +5,7 @@ $url = $_POST['url'];
 $name = preg_split("/\//", $url, 0, PREG_SPLIT_NO_EMPTY);
 $fileName = dirname(__FILE__) . '/pdf/' . $name[sizeof($name) - 1] . '.pdf';
 
-$baseUrl = $name[0] . '//' . $name[1] . '/cached/';
+$baseUrl = $name[0] . '//' . $name[1] . '/cache/';
 
 // $baseUrl = $name[0] . '//' . $name[1] . '/' . $name[2] . '/' . $name[3] . '/';
 
