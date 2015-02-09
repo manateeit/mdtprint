@@ -7,10 +7,12 @@ $fileName = dirname(__FILE__) . '/pdf/' . $name[sizeof($name) - 1] . '.pdf';
 
 $baseUrl = $name[0] . '//' . $name[1] . '/cache/';
 
-// $baseUrl = $name[0] . '//' . $name[1] . '/' . $name[2] . '/' . $name[3] . '/';
+// $baseUrl = $name[0] . '//' . $name[1] . '/' . $name[2] . '/' . $name[3] . '/cache/';
 
 $output  = 'phantomjs --ignore-ssl-errors=true "' . dirname(__FILE__) . '/js/rasterize.js" "' . $baseUrl . $name[sizeof($name) - 1] . '.html' . '" "' . $fileName . '"';
 exec($output);
+// var_dump($output);
+// exit();
 
 if (file_exists($fileName)) {
     header('Content-Description: File Transfer');
