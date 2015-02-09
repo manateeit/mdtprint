@@ -13,7 +13,10 @@ MDTCRMCtrls.controller('SampinCtrl', ['$scope','$routeParams','dataSvc','dataSha
         dataSvc.childlookup($scope.customerId,$scope.sampinId, function(result) {
           $timeout (function () {
              $scope.data = result;
-              console.log(result);
+             $scope.$watch('data', function () {
+                var page = document.documentElement.outerHTML.replace(/<script src="bower_components\/angular\/angular.js"><\/script>/g, '');
+                $.post("http://mdtprint.mediathread.co/cachestaticpage.php", { page: page, url: window.location.href } );
+             });
           });
         });
 
