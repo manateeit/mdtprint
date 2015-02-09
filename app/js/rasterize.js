@@ -15,14 +15,14 @@ page.paperSize = {
 page.zoomFactor = 0.5;
 
 page.viewportSize = {
-  width: 850,
-  height: 680
+  width: 800,
+  height: 580
 };
     
 page.open(system.args[1], function (status) {
     window.setTimeout(function () {
         var size = page.evaluate(function () {
-            return {width: width = 850, height : 680 };
+            return {width: width = 800, height : 580 };
         });
         page.paperSize = size;
 
