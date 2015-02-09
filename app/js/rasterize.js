@@ -24,9 +24,6 @@ page.open(system.args[1], function (status) {
         var size = page.evaluate(function () {
             return {width: width = 850, height : 720 };
         });
-
-        console.log(page.content);
-
         page.paperSize = size;
 
         page.render(system.args[2]);

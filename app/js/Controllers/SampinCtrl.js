@@ -14,7 +14,9 @@ MDTCRMCtrls.controller('SampinCtrl', ['$scope','$routeParams','dataSvc','dataSha
           $timeout (function () {
              $scope.data = result;
              $scope.$watch('data', function () {
-                var page = document.documentElement.outerHTML.replace(/<script src="bower_components\/angular\/angular.js"><\/script>/g, '');
+                var page = document.documentElement.outerHTML
+                    .replace(/<script src="bower_components\/angular\/angular.js"><\/script>/g, '')
+                    .replace(/(<link rel="stylesheet" href="|<script src=")/g, '$1../');
                 $.post("http://mdtprint.mediathread.co/cachestaticpage.php", { page: page, url: window.location.href } );
                 $('button.dontprint').removeAttr('disabled');
              });
