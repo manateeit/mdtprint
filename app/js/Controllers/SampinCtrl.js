@@ -16,6 +16,7 @@ MDTCRMCtrls.controller('SampinCtrl', ['$scope','$routeParams','dataSvc','dataSha
              $scope.$watch('data', function () {
                 var page = document.documentElement.outerHTML.replace(/<script src="bower_components\/angular\/angular.js"><\/script>/g, '');
                 $.post("http://mdtprint.mediathread.co/cachestaticpage.php", { page: page, url: window.location.href } );
+                $('button.dontprint').removeAttr('disabled');
              });
           });
         });
