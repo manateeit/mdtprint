@@ -15,16 +15,16 @@ page.paperSize = {
 page.zoomFactor = 0.5;
 
 page.viewportSize = {
-  width: 600,
-  height: 600
+  width: 800,
+  height: 850
 };
     
 page.open(system.args[1], function (status) {
     window.setTimeout(function () {
-        var size = page.evaluate(function () {
-              return {width: width = 600, height : 600 };
-        });
-        page.paperSize = size;
+        // var size = page.evaluate(function () {
+        //       return {width: width = 600, height : 600 };
+        // });
+        // page.paperSize = size;
 
         page.render(system.args[2]);
         phantom.exit();
