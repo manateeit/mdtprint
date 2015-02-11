@@ -17,7 +17,7 @@ page.zoomFactor = 0.7;
 page.open(system.args[1], function (status) {
     window.setTimeout(function () {
         var size = page.evaluate(function () {
-            return {width: width = 850, height : 600 };
+            return {width: width = 900, height : 800 };
         });
         page.paperSize = size;
 
