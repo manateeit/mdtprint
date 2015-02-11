@@ -16,7 +16,7 @@ page.zoomFactor = 0.4;
 
 page.viewportSize = {
   width: 600,
-  height: 600
+  height: 800
 };
     
 page.open(system.args[1], function (status) {
