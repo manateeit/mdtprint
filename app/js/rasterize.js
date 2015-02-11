@@ -22,7 +22,7 @@ page.viewportSize = {
 page.open(system.args[1], function (status) {
     window.setTimeout(function () {
         var size = page.evaluate(function () {
-              return {width: width = 576, height : 384 };
+              return {width: width = 600, height : 600 };
         });
         page.paperSize = size;
 
