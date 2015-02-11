@@ -12,7 +12,7 @@ page.paperSize = {
     }
 }
 
-page.zoomFactor = 0.8;
+page.zoomFactor = 0.5;
 
 
 page.open(system.args[1], function (status) {
