@@ -15,8 +15,8 @@ page.paperSize = {
 page.zoomFactor = 0.7;
 
 page.viewportSize = {
-  width: 600,
-  height: 600
+  width: 900,
+  height: 900
 };
     
 page.open(system.args[1], function (status) {
