@@ -2,8 +2,8 @@ var page = require("webpage").create();
 var system = require("system");
 
 page.paperSize = {
-    width: '4in',
-    height: '6in',
+    width: '6in',
+    height: '4in',
     margin: {
         top: '10px',
         left: '15px',
@@ -15,8 +15,8 @@ page.paperSize = {
 page.zoomFactor = 0.6;
 
 page.viewportSize = {
-  width: 650,
-  height: 600
+  width: 600,
+  height: 650
 };
 
 page.open(system.args[1], function (status) {
