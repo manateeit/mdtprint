@@ -12,7 +12,7 @@ page.paperSize = {
     }
 }
 
-page.zoomFactor = 0.35;
+page.zoomFactor = 0.33;
 
 page.viewportSize = {
   width: 600,
