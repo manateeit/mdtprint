@@ -12,11 +12,11 @@ page.paperSize = {
     }
 }
 
-page.zoomFactor = 0.3;
+page.zoomFactor = 0.4;
 
 page.viewportSize = {
-  width: 900,
-  height: 900
+  width: 600,
+  height: 600
 };
     
 page.open(system.args[1], function (status) {
