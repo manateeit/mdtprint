@@ -21,10 +21,10 @@ page.viewportSize = {
     
 page.open(system.args[1], function (status) {
     window.setTimeout(function () {
-        // var size = page.evaluate(function () {
-        //       return {width: width = 600, height : 600 };
-        // });
-        // page.paperSize = size;
+        var size = page.evaluate(function () {
+              return {width: width = 576, height : 384 };
+        });
+        page.paperSize = size;
 
         page.render(system.args[2]);
         phantom.exit();
