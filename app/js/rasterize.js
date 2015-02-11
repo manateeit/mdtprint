@@ -12,7 +12,7 @@ page.paperSize = {
     }
 }
 
-page.zoomFactor = 0.6;
+page.zoomFactor = 0.5;
 
 page.viewportSize = {
   width: 800,
@@ -22,7 +22,7 @@ page.viewportSize = {
 page.open(system.args[1], function (status) {
     window.setTimeout(function () {
         var size = page.evaluate(function () {
-            return {width: width = 800, height : 630 };
+              return {width: width = $(document).width(), height : $(document).height() };
         });
         page.paperSize = size;
 
