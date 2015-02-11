@@ -12,17 +12,17 @@ page.paperSize = {
     }
 }
 
-page.zoomFactor = 0.7;
+page.zoomFactor = 0.6;
 
 page.viewportSize = {
-  width: 900,
-  height: 900
+  width: 800,
+  height: 630
 };
     
 page.open(system.args[1], function (status) {
     window.setTimeout(function () {
         var size = page.evaluate(function () {
-            return {width: width = 576, height : 384 };
+            return {width: width = 800, height : 630 };
         });
         page.paperSize = size;
 
