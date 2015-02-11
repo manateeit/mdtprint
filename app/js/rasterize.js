@@ -12,12 +12,12 @@ page.paperSize = {
     }
 }
 
-page.zoomFactor = 0.7;
+page.zoomFactor = 0.5;
 
 page.open(system.args[1], function (status) {
     window.setTimeout(function () {
         var size = page.evaluate(function () {
-            return {width: width = 900, height : 800 };
+            return {width: width = 900, height : 850 };
         });
         page.paperSize = size;
 
