@@ -12,12 +12,12 @@ page.paperSize = {
     }
 }
 
-page.zoomFactor = 0.5;
+page.zoomFactor = 0.7;
 
-// page.viewportSize = {
-//   width: 800,
-//   height: 800
-// };
+page.viewportSize = {
+  width: 800,
+  height: 800
+};
     
 page.open(system.args[1], function (status) {
     window.setTimeout(function () {
