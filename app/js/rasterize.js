@@ -12,19 +12,18 @@ page.paperSize = {
     }
 }
 
-page.zoomFactor = 0.4;
+page.zoomFactor = 0.6;
 
 page.viewportSize = {
   width: 600,
   height: 650
 };
-    
+
 page.open(system.args[1], function (status) {
     window.setTimeout(function () {
         var size = page.evaluate(function () {
               return {width: width = 576, height : 384 };
         });
-        page.paperSize = size;
 
         page.render(system.args[2]);
         phantom.exit();
